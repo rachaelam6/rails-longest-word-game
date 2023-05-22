@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<% if @score.zero? %>
+  <p>Sorry, you didn't score any points.</p>
+<% else %>
+  <p>Congratulations! You scored <%= @score %> points.</p>
+<% end %>
+
+<%# Backlink from /score to /new %>
+<%# At the bottom of the results, add a link to go back to the New game page, using the link_to Rails helper %>
+<%= link_to "Play again!", new_path %>
